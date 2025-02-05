@@ -619,6 +619,8 @@
 					});
 					</script>
 					
+				
+					
 				</div>
 				<div class="col-md-5 pl-md-5">
 					<h3 class="mb-5">My Contact Details</h3>
@@ -646,9 +648,38 @@
 			</div>
 		</div>
 	</section>
+	
 
 
-	<footer class="site-footer">
+	<footer class="site-footer"><!-- Chatbot Icon -->
+		<div id="chatbot-icon" onclick="toggleChatbot()">
+			💬
+		</div>
+		
+		<!-- Chatbot Container (Initially Hidden) -->
+		<div id="chatbot-container" class="hidden">
+			<div class="chatbot-container">
+				<div class="chat-header">
+					Ask Me About My Portfolio
+					<button class="close-btn" onclick="toggleChatbot()">✖</button>
+				</div>
+				<div class="chat-box" id="chat-box">
+					<div class="chat-message bot">Hi! Ask me about my projects, skills, or experience. 😊</div>
+				</div>
+				<div class="chat-input">
+					<input type="text" id="user-input" placeholder="Type a message..." />
+					<button id="send-btn">Send</button>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Link Chatbot CSS -->
+		<link rel="stylesheet" href="chatbot-style.css">
+		
+		<!-- Load Chatbot JS -->
+		<script src="chatbot-script.js"></script>
+		
+
 		<div class="container">
 
 			<div class="row mb-5">
@@ -672,6 +703,9 @@
 			</div>
 			
 		</div>
+
+		
+		
 	</footer>
 
 
