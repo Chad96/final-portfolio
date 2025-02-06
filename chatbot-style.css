@@ -98,7 +98,7 @@
 
 /* Chatbot header */
 .chat-header {
-    background: #007bff;
+    background: #bac964;
     color: white;
     padding: 10px;
     display: flex;
@@ -122,7 +122,7 @@
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background: #007bff;
+    background: #bac964;
     color: white;
     font-size: 24px;
     padding: 12px;
