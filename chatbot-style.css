@@ -42,12 +42,12 @@
 
 .bot {
     background: #007bff;
-    color: white;
+    color: rgb(38, 35, 35);
     align-self: flex-start;
 }
 
 .user {
-    background: #f1f1f1;
+    background: #1e1d1d;
     align-self: flex-end;
 }
 
@@ -55,7 +55,7 @@
 .chat-input {
     display: flex;
     padding: 10px;
-    border-top: 1px solid #ddd;
+    border-top: 1px solid #ffffff;
 }
 
 .chat-input input {
@@ -88,7 +88,7 @@
     right: 20px;
     width: 320px;
     height: 450px;
-    background: white;
+    background: rgb(137, 137, 137);
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     display: flex;
