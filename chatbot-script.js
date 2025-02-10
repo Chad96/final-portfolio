@@ -7,8 +7,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const responses = {
         "hi": "Hello! How can I help you today?",
         "who are you": "I'm your Portfolio Assistant, here to answer questions about your projects and skills!",
-        "what technologies do you use": "I work with HTML, CSS, JavaScript, and more!",
-        "tell me about your projects": "I have worked on various projects, including web apps, shopping lists, and a hotel booking system.",
+        "what technologies do you use": "I work with React JS, React Native, Python, and Java!",
+        "tell me about your projects": "I have worked on various projects, including web apps,Recipe apps,Voice recorder apps, shopping lists, and a hotel booking system with payment gateway integration.",
         "default": "I'm not sure about that. Try asking about my projects, skills, or experience."
     };
 
