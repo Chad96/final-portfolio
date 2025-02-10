@@ -41,7 +41,7 @@
 }
 
 .bot {
-    background: #007bff;
+    background: #9baab9;
     color: rgb(38, 35, 35);
     align-self: flex-start;
 }
@@ -67,7 +67,7 @@
 }
 
 .chat-input button {
-    background: #007bff;
+    background: #bac964;
     color: white;
     border: none;
     padding: 8px 12px;
