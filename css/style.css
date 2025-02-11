@@ -623,3 +623,28 @@ a {
 .letter-spacing {
   letter-spacing: .2rem;
   color: rgba(255, 255, 255, 0.5) !important; }
+
+  .certifications-section {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+}
+
+.certifications-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.certifications-container img {
+    width: 250px; /* Adjust size as needed */
+    height: auto;
+    border-radius: 0px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.certifications-container img:hover {
+    transform: scale(1.05);
+}
