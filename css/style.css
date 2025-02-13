@@ -230,16 +230,19 @@ a {
     font-weight: 200; }
 
 .site-link {
-  position: relative; }
+  position: relative; 
+  color: #4289d6;}
   .site-link i {
     position: relative;
     top: 2px;
+    
     -webkit-transition: .3s all ease;
     -o-transition: .3s all ease;
     transition: .3s all ease; }
   .site-link:hover i {
     position: relative;
-    margin-left: 20px; }
+    margin-left: 20px; 
+    }
 
 .site-list {
   padding: 0;
@@ -257,7 +260,7 @@ a {
     .site-list li.site-check {
       padding-left: 30px; }
       .site-list li.site-check:before {
-        color: #bac964;
+        color: #1a1c11;
         font-size: 16px;
         content: "\ebd3"; }
 
@@ -701,8 +704,8 @@ a {
     to { transform: scale(1); }
 }
 .icon i {
-  font-size: 50px; /* Adjust icon size */
-  color: #007bff; /* Change icon color */
+  font-size: 50px; /*  icon size */
+  color: #4289d6; /*  icon color */
   margin-top: 25%;
 }
 
