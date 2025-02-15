@@ -353,7 +353,7 @@
 		<div class="container">
 			<div class="row mb-5 align-items-center">
 				<div class="col-lg-7 pr-lg-5 mb-5 mb-lg-0">
-					<img src="images/IMG_9629.jpg" alt="Image placeholder" class="img-fluid" style="width: 75.5%; height: auto;">
+					<img src="images/hobbies/IMG_8595.jpg" alt="Image placeholder" class="img-fluid" style="width: 75.5%; height: auto;">
 				</div>
 				
 				<div class="col-lg-5 pl-lg-5">
@@ -496,6 +496,8 @@
 	
 			</div>
 		</div>
+		
+
 	</section>
 
 	
@@ -505,73 +507,123 @@
 			<div class="row">
 				<div class="col-md-12 mb-5">
 					<div class="section-heading text-center">
-						<h2>My <strong>Hobbies and Social Activities</strong></h2>
+						<h2>My <strong>Hobbies and Social Activities Gallery</strong></h2>
 					</div>
 				</div>
 			</div>
-
+	
 			<div class="row">
 				<div class="col-sm-6 col-lg-4 mb-4">
 					<div class="blog-entry">
-						<a href="#"><img src="images/IMG_6530.jpg" alt="Image placeholder" class="img-fluid"></a>
-						<div class="blog-entry-text">
-							<h3><a href="#">Finding balance in play and code—each inspiring the other."</a></h3>
-							<p class="mb-4">This blend of active play and focused development keeps me agile, energized, and ready to innovate in both arenas.
-
-
-
-
-
-
-							</p>
-
-							<!-- <div class="meta">
-								<a href="#"><span class="icon-calendar"></span> Aug 7, 2018</a>
-								<a href="#"><span class="icon-bubble"></span> 5 Comments</a>
-							</div> -->
-						</div>
+						<a href="#"><img src="images/pics (1)/IMG_8300.jpg" alt="Hobby Image" class="img-fluid"></a>
 					</div>
 				</div>
-
+	
 				<div class="col-sm-6 col-lg-4 mb-4">
 					<div class="blog-entry">
-						<a href="#"><img src="images/IMG_6042.jpg" alt="Image placeholder" class="img-fluid"></a>
-						<div class="blog-entry-text">
-							<h3><a href="#">When I'm not debugging, I'm diving—finding inspiration both on screen and in the pool.</a></h3>
-							<p class="mb-4">Stepping away from debugging to dive into the water gives me a refreshing burst of creativity and clarity.</p>
-							<br>
-							<br>
-							<br>
-							<br>
-							
-
-							<!-- <div class="meta">
-								<a href="#"><span class="icon-calendar"></span> Aug 7, 2018</a>
-								<a href="#"><span class="icon-bubble"></span> 5 Comments</a>
-							</div> -->
-						</div>
+						<a href="#"><img src="images/hobbies/IMG_8594_1.jpg" alt="Hobby Image" class="img-fluid"></a>
 					</div>
 				</div>
-
+	
 				<div class="col-sm-6 col-lg-4 mb-4">
 					<div class="blog-entry">
-						<a href="#"><img src="images/IMG_6241.jpg" alt="Image placeholder" class="img-fluid"></a>
-						<div class="blog-entry-text">
-							<h3><a href="#">Finding balance in nature and code—each inspiring the other.</a></h3>
-							<p class="mb-4">The serene environment of the forest grounds me and offers a fresh perspective on tackling complex problems.</p>
-
-							<!-- <div class="meta">
-								<a href="#"><span class="icon-calendar"></span> Aug 7, 2018</a>
-								<a href="#"><span class="icon-bubble"></span> 5 Comments</a>
-							</div> -->
-						</div>
+						<a href="#"><img src="images/IMG_6241.jpg" alt="Hobby Image" class="img-fluid"></a>
 					</div>
 				</div>
-
+	
+				<div class="col-sm-6 col-lg-4 mb-4">
+					<div class="blog-entry">
+						<a href="#"><img src="images/hobbies/IMG_8535.jpg" alt="Hobby Image" class="img-fluid"></a>
+					</div>
+				</div>
+	
+				<div class="col-sm-6 col-lg-4 mb-4">
+					<div class="blog-entry">
+						<a href="#"><img src="images/hobbies/IMG_8594_1.jpg" alt="Hobby Image" class="img-fluid"></a>
+					</div>
+				</div>
+				<div class="col-sm-6 col-lg-4 mb-4">
+					<div class="blog-entry">
+						<a href="#"><img src="images/pics (1)/IMG_8671.jpg" alt="Hobby Image" class="img-fluid"></a>
+					</div>
+				</div>
 			</div>
 		</div>
+		<br>
+		<style>
+			.wrapper {
+				width: 100%;
+				height: 90vh;
+				position: relative;
+				text-align: center;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				overflow: hidden;
+				background-color: #222;
+			}
+	
+			.inner {
+				--w: 120px;
+				--h: 180px;
+				--translateZ: calc((var(--w) + var(--h)) + 20px);
+				--rotateX: -15deg;
+				--perspective: 1000px;
+				position: absolute;
+				width: var(--w);
+				height: var(--h);
+				top: 25%;
+				left: calc(50% - (var(--w) / 2));
+				z-index: 2;
+				transform-style: preserve-3d;
+				transform: perspective(var(--perspective));
+				animation: rotating 20s linear infinite;
+			}
+	
+			@keyframes rotating {
+				from {
+					transform: perspective(var(--perspective)) rotateX(var(--rotateX)) rotateY(0);
+				}
+				to {
+					transform: perspective(var(--perspective)) rotateX(var(--rotateX)) rotateY(1turn);
+				}
+			}
+	
+			.card {
+				position: absolute;
+				border: 2px solid rgba(var(--color-card));
+				border-radius: 12px;
+				overflow: hidden;
+				inset: 0;
+				transform: rotateY(calc((360deg / var(--quantity)) * var(--index))) translateZ(var(--translateZ));
+			}
+	
+			.img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="inner" style="--quantity: 10;">
+				<div class="card" style="--index: 0;--color-card: 142, 249, 252;"><img class="img" src="images/pics (1)/IMG_8672.jpg" alt="Gallery Image 1"></div>
+				<div class="card" style="--index: 1;--color-card: 142, 252, 204;"><img class="img" src="images/pics (1)/IMG_7768.jpg" alt="Gallery Image 2"></div>
+				<div class="card" style="--index: 2;--color-card: 142, 252, 157;"><img class="img" src="images/pics (1)/IMG_7774.jpg" alt="Gallery Image 3"></div>
+				<div class="card" style="--index: 3;--color-card: 215, 252, 142;"><img class="img" src="images/pics (1)/IMG_8300.jpg" alt="Gallery Image 4"></div>
+				<div class="card" style="--index: 4;--color-card: 252, 252, 142;"><img class="img" src="images/pics (1)/IMG_8671.jpg" alt="Gallery Image 5"></div>
+				<div class="card" style="--index: 5;--color-card: 252, 208, 142;"><img class="img" src="images/hobbies/IMG_8594.jpg" alt="Gallery Image 6"></div>
+				<div class="card" style="--index: 6;--color-card: 252, 142, 142;"><img class="img" src="images/hobbies/IMG_8595.jpg" alt="Gallery Image 7"></div>
+				<div class="card" style="--index: 7;--color-card: 252, 142, 239;"><img class="img" src="images/hobbies/IMG_8594_1.jpg" alt="Gallery Image 8"></div>
+				<div class="card" style="--index: 8;--color-card: 204, 142, 252;"><img class="img" src="images/IMG_6530.jpg" alt="Gallery Image 9"></div>
+				<div class="card" style="--index: 9;--color-card: 142, 202, 252;"><img class="img" src="images/pics (1)/IMG_8672.jpg" alt="Gallery Image 10"></div>
+			</div>
+		</div>
+		
 	</section>
-
+	<!-- <iframe src="gallery.html" width="100%" height="500px"></iframe> -->
+	
 	<section class="site-section" id="section-contact">
 		<div class="container">
 			<div class="row">
