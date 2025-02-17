@@ -97,7 +97,7 @@
 							<p>A simple and user-friendly recipe app for cooking enthusiasts.</p>
 							<div class="project-links">
 								<a href="https://github.com/Chad96/Recipe-app-react" target="_blank" class="btn btn-primary">GitHub</a>
-								<a href="https://recipeapp-demo.com" target="_blank" class="btn btn-success">Live Demo</a>
+								<a href="https://github.com/Chad96/Recipe-app-react" target="_blank" class="btn btn-success">Live Demo</a>
 							</div>
 						</div>
 					</div>
@@ -125,7 +125,7 @@
 							<p>A simple and user-friendly hotel booking app for travel enthusiasts.</p>
 							<div class="project-links">
 								<a href="https://github.com/Chad96/Hotel-Booking-App" target="_blank" class="btn btn-primary">GitHub</a>
-								<a href="https://photographyportfolio-demo.com" target="_blank" class="btn btn-success">Live Demo</a>
+								<a href="https://github.com/Chad96/Hotel-Booking-App" target="_blank" class="btn btn-success">Live Demo</a>
 							</div>
 						</div>
 					</div>
@@ -153,7 +153,7 @@
 							<p>A simple and user-friendly weather app for weather enthusiasts</p>
 							<div class="project-links">
 								<a href="https://github.com/Chad96/my-weather-app" target="_blank" class="btn btn-primary">GitHub</a>
-								<a href="https://photographyportfolio-demo.com" target="_blank" class="btn btn-success">Live Demo</a>
+								<a href="https://github.com/Chad96/my-weather-app" target="_blank" class="btn btn-success">Live Demo</a>
 							</div>
 						</div>
 					</div>
@@ -181,7 +181,7 @@
 							<p>A simple and user-friendly voice recorder app for quality voicenotes</p>
 							<div class="project-links">
 								<a href="https://github.com/Chad96/-React-Native-Audio-Recorder-24" target="_blank" class="btn btn-primary">GitHub</a>
-								<a href="https://photographyportfolio-demo.com" target="_blank" class="btn btn-success">Live Demo</a>
+								<a href="https://github.com/Chad96/-React-Native-Audio-Recorder-24" target="_blank" class="btn btn-success">Live Demo</a>
 							</div>
 						</div>
 					</div>
@@ -191,22 +191,27 @@
 		</div>
 	</section>
 	
+	
 	<!-- Bootstrap Lightbox (optional) -->
 	<script>
 		document.querySelectorAll('.carousel img').forEach(img => {
-			img.addEventListener('click', function () {
-				const fullView = document.createElement('div');
-				fullView.classList.add('full-view');
-				fullView.innerHTML = `<div class="overlay"></div><img src="${this.src}" class="full-img"><span class="close-btn">&times;</span>`;
-				document.body.appendChild(fullView);
-	
-				document.querySelector('.close-btn').addEventListener('click', () => {
-					fullView.remove();
-				});
-			});
+		  img.addEventListener('click', function () {
+			const fullView = document.createElement('div');
+			fullView.classList.add('full-view');
+			fullView.innerHTML = `<div class="overlay"></div><img src="${this.src}" class="full-img"><span class="close-btn">&times;</span>`;
+			document.body.appendChild(fullView);
+		  });
 		});
-	</script>
-	
+	  
+		// Event delegation for the close button
+		document.body.addEventListener('click', function(event) {
+		  if (event.target.classList.contains('close-btn')) {
+			const fullView = event.target.closest('.full-view');
+			if (fullView) fullView.remove();
+		  }
+		});
+	  </script>
+	  
 	<style>
 		.project-links .btn {
 			margin: 5px;
@@ -607,10 +612,10 @@
 	<body>
 		<div class="wrapper">
 			<div class="inner" style="--quantity: 10;">
-				<div class="card" style="--index: 0;--color-card: 142, 249, 252;"><img class="img" src="images/pics (1)/IMG_8672.jpg" alt="Gallery Image 1"></div>
-				<div class="card" style="--index: 1;--color-card: 142, 252, 204;"><img class="img" src="images/pics (1)/IMG_7768.jpg" alt="Gallery Image 2"></div>
-				<div class="card" style="--index: 2;--color-card: 142, 252, 157;"><img class="img" src="images/pics (1)/IMG_7774.jpg" alt="Gallery Image 3"></div>
-				<div class="card" style="--index: 3;--color-card: 215, 252, 142;"><img class="img" src="images/pics (1)/IMG_8300.jpg" alt="Gallery Image 4"></div>
+				<div class="card" style="--index: 0;--color-card: 142, 249, 252;"><img class="img" src="images/IMG_8295.jpg" alt="Gallery Image 1"></div>
+				<div class="card" style="--index: 1;--color-card: 142, 252, 204;"><img class="img" src="images/IMG_8298 (1).jpg" alt="Gallery Image 2"></div>
+				<div class="card" style="--index: 2;--color-card: 142, 252, 157;"><img class="img" src="images/IMG_9629.jpg" alt="Gallery Image 3"></div>
+				<div class="card" style="--index: 3;--color-card: 215, 252, 142;"><img class="img" src="images/pics (1)/IMG_8679.jpg" alt="Gallery Image 4"></div>
 				<div class="card" style="--index: 4;--color-card: 252, 252, 142;"><img class="img" src="images/pics (1)/IMG_8671.jpg" alt="Gallery Image 5"></div>
 				<div class="card" style="--index: 5;--color-card: 252, 208, 142;"><img class="img" src="images/hobbies/IMG_8594.jpg" alt="Gallery Image 6"></div>
 				<div class="card" style="--index: 6;--color-card: 252, 142, 142;"><img class="img" src="images/hobbies/IMG_8595.jpg" alt="Gallery Image 7"></div>
