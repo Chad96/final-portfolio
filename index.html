@@ -12,6 +12,7 @@
 	<link rel="stylesheet" href="css/style.css">
 
 	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
 
 </head>
@@ -96,7 +97,7 @@
 							<p>A simple and user-friendly recipe app for cooking enthusiasts.</p>
 							<div class="project-links">
 								<a href="https://github.com/Chad96/Recipe-app-react" target="_blank" class="btn btn-primary">GitHub</a>
-								<a href="https://recipeapp-demo.com" target="_blank" class="btn btn-success">Live Demo</a>
+								<a href="https://github.com/Chad96/Recipe-app-react" target="_blank" class="btn btn-success">Live Demo</a>
 							</div>
 						</div>
 					</div>
@@ -124,7 +125,7 @@
 							<p>A simple and user-friendly hotel booking app for travel enthusiasts.</p>
 							<div class="project-links">
 								<a href="https://github.com/Chad96/Hotel-Booking-App" target="_blank" class="btn btn-primary">GitHub</a>
-								<a href="https://photographyportfolio-demo.com" target="_blank" class="btn btn-success">Live Demo</a>
+								<a href="https://github.com/Chad96/Hotel-Booking-App" target="_blank" class="btn btn-success">Live Demo</a>
 							</div>
 						</div>
 					</div>
@@ -152,7 +153,7 @@
 							<p>A simple and user-friendly weather app for weather enthusiasts</p>
 							<div class="project-links">
 								<a href="https://github.com/Chad96/my-weather-app" target="_blank" class="btn btn-primary">GitHub</a>
-								<a href="https://photographyportfolio-demo.com" target="_blank" class="btn btn-success">Live Demo</a>
+								<a href="https://github.com/Chad96/my-weather-app" target="_blank" class="btn btn-success">Live Demo</a>
 							</div>
 						</div>
 					</div>
@@ -180,7 +181,7 @@
 							<p>A simple and user-friendly voice recorder app for quality voicenotes</p>
 							<div class="project-links">
 								<a href="https://github.com/Chad96/-React-Native-Audio-Recorder-24" target="_blank" class="btn btn-primary">GitHub</a>
-								<a href="https://photographyportfolio-demo.com" target="_blank" class="btn btn-success">Live Demo</a>
+								<a href="https://github.com/Chad96/-React-Native-Audio-Recorder-24" target="_blank" class="btn btn-success">Live Demo</a>
 							</div>
 						</div>
 					</div>
@@ -190,22 +191,27 @@
 		</div>
 	</section>
 	
+	
 	<!-- Bootstrap Lightbox (optional) -->
 	<script>
 		document.querySelectorAll('.carousel img').forEach(img => {
-			img.addEventListener('click', function () {
-				const fullView = document.createElement('div');
-				fullView.classList.add('full-view');
-				fullView.innerHTML = `<div class="overlay"></div><img src="${this.src}" class="full-img"><span class="close-btn">&times;</span>`;
-				document.body.appendChild(fullView);
-	
-				document.querySelector('.close-btn').addEventListener('click', () => {
-					fullView.remove();
-				});
-			});
+		  img.addEventListener('click', function () {
+			const fullView = document.createElement('div');
+			fullView.classList.add('full-view');
+			fullView.innerHTML = `<div class="overlay"></div><img src="${this.src}" class="full-img"><span class="close-btn">&times;</span>`;
+			document.body.appendChild(fullView);
+		  });
 		});
-	</script>
-	
+	  
+		// Event delegation for the close button
+		document.body.addEventListener('click', function(event) {
+		  if (event.target.classList.contains('close-btn')) {
+			const fullView = event.target.closest('.full-view');
+			if (fullView) fullView.remove();
+		  }
+		});
+	  </script>
+	  
 	<style>
 		.project-links .btn {
 			margin: 5px;
@@ -313,21 +319,7 @@
 						<span class="school">Mobile App Laboratory (mLAB)</span>
 					</div>
 
-					<!-- <div class="resume-item mb-4">
-						<span class="date"><span class="icon-calendar"></span> March 2013 - Present</span>
-						<h3>Lead Product Designer</h3>
-						<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-						<span class="school">Twitter</span>
-					</div> -->
-
-					<!-- <div class="resume-item mb-4">
-						<span class="date"><span class="icon-calendar"></span> March 2013 - Present</span>
-						<h3>Lead Product Designer</h3>
-						<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-						<span class="school">Shopify</span>
-					</div> -->
-
-
+					
 				</div>
 			</div>
 		</div>
@@ -352,7 +344,7 @@
 		<div class="container">
 			<div class="row mb-5 align-items-center">
 				<div class="col-lg-7 pr-lg-5 mb-5 mb-lg-0">
-					<img src="images/IMG_9629.jpg" alt="Image placeholder" class="img-fluid" style="width: 75.5%; height: auto;">
+					<img src="images/hobbies/IMG_8595.jpg" alt="Image placeholder" class="img-fluid" style="width: 75.5%; height: auto;">
 				</div>
 				
 				<div class="col-lg-5 pl-lg-5">
@@ -404,7 +396,7 @@
 
 					<div class="block-47 d-flex mb-5">
 						<div class="block-47-image">
-							<img src="images/IMG_8298 (1).jpg" alt="Image placeholder" class="img-fluid">
+							<img src="images/pics (1)/IMG_8297.jpg" alt="Image placeholder" class="img-fluid">
 						</div>
 						<blockquote class="block-47-quote">
 							<p>&ldquo;I genuinely enjoy tackling challenging problems. When faced with an issue, I break it down methodically, identify the root cause, and explore multiple solutions to find the most efficient one. This mindset has consistently helped me deliver high-quality results under tight deadlines.&rdquo;</p>
@@ -419,7 +411,7 @@
 
 					<div class="block-47 d-flex mb-5">
 						<div class="block-47-image">
-							<img src="images/IMG_8298 (1).jpg" alt="Image placeholder" class="img-fluid">
+							<img src="images/pics (1)/IMG_8300.jpg" alt="Image placeholder" class="img-fluid">
 						</div>
 						<blockquote class="block-47-quote">
 							<p>&ldquo;I thrive in collaborative environments. I’m always open to listening to different perspectives, offering constructive feedback, and supporting my team whenever needed. My ability to work well with others has helped foster strong, productive relationships in every team I’ve been part of.&rdquo;</p>
@@ -432,7 +424,7 @@
 
 					<div class="block-47 d-flex mb-5">
 						<div class="block-47-image">
-							<img src="images/IMG_8298 (1).jpg" alt="Image placeholder" class="img-fluid">
+							<img src="images/pics (1)/IMG_8677.jpg" alt="Image placeholder" class="img-fluid">
 						</div>
 						<blockquote class="block-47-quote">
 							<p>&ldquo;I pride myself on being able to explain complex technical concepts in simple terms. Whether I’m working with teammates, stakeholders, or clients, I ensure that everyone is on the same page, which has helped avoid miscommunication and keep projects running smoothly.&rdquo;</p>
@@ -447,9 +439,8 @@
 	</section>
 
 
-	<section class="site-section pb-0"  id="section-services">
+	<section class="site-section pb-0" id="section-services">
 		<div class="container">
-
 			<div class="row mb-4">
 				<div class="col-md-12">
 					<div class="section-heading text-center">
@@ -458,48 +449,47 @@
 				</div>
 			</div>
 			<div class="row">
-
+	
 				<div class="col-md-6 col-lg-4 text-center mb-5">
 					<div class="site-service-item site-animate" data-animate-effect="fadeIn">
 						<span class="icon">
-							<span class="icon-browser2"></span>
+							<i class="fas fa-code"></i> <!-- Web Development Icon -->
 						</span>
 						<h3 class="mb-4">Web Development</h3>
 						<p>I craft responsive and visually appealing websites that leave a lasting impression. From elegant landing pages to robust e-commerce platforms, I focus on delivering seamless user experiences and optimized performance across all devices.</p>
 						<br>
-						<p><a href="#" class="site-link">Learn More <i class="icon-chevron-right"></i></a></p>
+						<p><a href="https://en.wikipedia.org/wiki/Web_development" class="site-link">Learn More <i class="fas fa-chevron-right"></i></a></p>
 					</div>
 				</div>
+	
 				<div class="col-md-6 col-lg-4 text-center mb-5">
 					<div class="site-service-item site-animate" data-animate-effect="fadeIn">
 						<span class="icon">
-							<span class="icon-presentation"></span>
+							<i class="fas fa-mobile-alt"></i> <!-- Mobile App Development Icon -->
 						</span>
 						<h3 class="mb-4">Mobile App Development</h3>
 						<p>I develop intuitive and engaging mobile applications for both iOS and Android platforms. Whether it’s a sleek business app or a feature-rich social platform, I focus on creating mobile solutions that enhance user interaction and drive results.</p>
 						<br>
-						
-						<p><a href="#" class="site-link">Learn More <i class="icon-chevron-right"></i></a></p>
+						<p><a href="https://en.wikipedia.org/wiki/Mobile_app_development" class="site-link">Learn More <i class="fas fa-chevron-right"></i></a></p>
 					</div>
 				</div>
+	
 				<div class="col-md-6 col-lg-4 text-center mb-5">
 					<div class="site-service-item site-animate" data-animate-effect="fadeIn">
 						<span class="icon">
-							<span class="icon-video2"></span>
+							<i class="fas fa-server"></i> <!-- Full-Stack Development Icon -->
 						</span>
 						<h3 class="mb-4">Full-Stack Development</h3>
 						<p>I offer end-to-end full-stack development, handling both front-end and back-end technologies to build dynamic and scalable applications. My services include everything from database architecture to API integration, ensuring a smooth and cohesive product.</p>
-						
-						<p><a href="#" class="site-link">Learn More <i class="icon-chevron-right"></i></a></p>
+						<p><a href="https://www.geeksforgeeks.org/what-is-full-stack-development/" class="site-link">Learn More <i class="fas fa-chevron-right"></i></a></p>
 					</div>
 				</div>
-
-				
-
+	
 			</div>
 		</div>
-	</section>
+		
 
+	</section>
 
 	
 
@@ -508,73 +498,120 @@
 			<div class="row">
 				<div class="col-md-12 mb-5">
 					<div class="section-heading text-center">
-						<h2>My <strong>Hobbies and Social Activities</strong></h2>
+						<h2>My <strong>Hobbies and Social Activities Gallery</strong></h2>
 					</div>
 				</div>
 			</div>
-
 			<div class="row">
 				<div class="col-sm-6 col-lg-4 mb-4">
 					<div class="blog-entry">
-						<a href="#"><img src="images/IMG_6530.jpg" alt="Image placeholder" class="img-fluid"></a>
-						<div class="blog-entry-text">
-							<h3><a href="#">Finding balance in play and code—each inspiring the other."</a></h3>
-							<p class="mb-4">This blend of active play and focused development keeps me agile, energized, and ready to innovate in both arenas.
-
-
-
-
-
-
-							</p>
-
-							<!-- <div class="meta">
-								<a href="#"><span class="icon-calendar"></span> Aug 7, 2018</a>
-								<a href="#"><span class="icon-bubble"></span> 5 Comments</a>
-							</div> -->
-						</div>
+						<a href="#"><img src="images/pics (1)/IMG_8300.jpg" alt="Hobby Image" class="img-fluid"></a>
 					</div>
 				</div>
-
+	
 				<div class="col-sm-6 col-lg-4 mb-4">
 					<div class="blog-entry">
-						<a href="#"><img src="images/IMG_6042.jpg" alt="Image placeholder" class="img-fluid"></a>
-						<div class="blog-entry-text">
-							<h3><a href="#">When I'm not debugging, I'm diving—finding inspiration both on screen and in the pool.</a></h3>
-							<p class="mb-4">Stepping away from debugging to dive into the water gives me a refreshing burst of creativity and clarity.</p>
-							<br>
-							<br>
-							<br>
-							<br>
-							
-
-							<!-- <div class="meta">
-								<a href="#"><span class="icon-calendar"></span> Aug 7, 2018</a>
-								<a href="#"><span class="icon-bubble"></span> 5 Comments</a>
-							</div> -->
-						</div>
+						<a href="#"><img src="images/hobbies/IMG_8594_1.jpg" alt="Hobby Image" class="img-fluid"></a>
 					</div>
 				</div>
-
+	
 				<div class="col-sm-6 col-lg-4 mb-4">
 					<div class="blog-entry">
-						<a href="#"><img src="images/IMG_6241.jpg" alt="Image placeholder" class="img-fluid"></a>
-						<div class="blog-entry-text">
-							<h3><a href="#">Finding balance in nature and code—each inspiring the other.</a></h3>
-							<p class="mb-4">The serene environment of the forest grounds me and offers a fresh perspective on tackling complex problems.</p>
-
-							<!-- <div class="meta">
-								<a href="#"><span class="icon-calendar"></span> Aug 7, 2018</a>
-								<a href="#"><span class="icon-bubble"></span> 5 Comments</a>
-							</div> -->
-						</div>
+						<a href="#"><img src="images/IMG_6241.jpg" alt="Hobby Image" class="img-fluid"></a>
 					</div>
 				</div>
-
+	
+				<div class="col-sm-6 col-lg-4 mb-4">
+					<div class="blog-entry">
+						<a href="#"><img src="images/pics (1)/IMG_8677.jpg" alt="Hobby Image" class="img-fluid"></a>
+					</div>
+				</div>
+	
+				<div class="col-sm-6 col-lg-4 mb-4">
+					<div class="blog-entry">
+						<a href="#"><img src="images/pics (1)/IMG_8077.jpg" alt="Hobby Image" class="img-fluid"></a>
+					</div>
+				</div>
+				<div class="col-sm-6 col-lg-4 mb-4">
+					<div class="blog-entry">
+						<a href="#"><img src="images/pics (1)/IMG_8671.jpg" alt="Hobby Image" class="img-fluid"></a>
+					</div>
+				</div>
 			</div>
 		</div>
+		<br>
+		<style>
+			.wrapper {
+				width: 100%;
+				height: 90vh;
+				position: relative;
+				text-align: center;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				overflow: hidden;
+				background-color: #222;
+			}
+	
+			.inner {
+				--w: 120px;
+				--h: 180px;
+				--translateZ: calc((var(--w) + var(--h)) + 20px);
+				--rotateX: -15deg;
+				--perspective: 1000px;
+				position: absolute;
+				width: var(--w);
+				height: var(--h);
+				top: 25%;
+				left: calc(50% - (var(--w) / 2));
+				z-index: 2;
+				transform-style: preserve-3d;
+				transform: perspective(var(--perspective));
+				animation: rotating 20s linear infinite;
+			}
+	
+			@keyframes rotating {
+				from {
+					transform: perspective(var(--perspective)) rotateX(var(--rotateX)) rotateY(0);
+				}
+				to {
+					transform: perspective(var(--perspective)) rotateX(var(--rotateX)) rotateY(1turn);
+				}
+			}
+	
+			.card {
+				position: absolute;
+				border: 2px solid rgba(var(--color-card));
+				border-radius: 12px;
+				overflow: hidden;
+				inset: 0;
+				transform: rotateY(calc((360deg / var(--quantity)) * var(--index))) translateZ(var(--translateZ));
+			}
+	
+			.img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="inner" style="--quantity: 10;">
+				<div class="card" style="--index: 0;--color-card: 142, 249, 252;"><img class="img" src="images/IMG_8295.jpg" alt="Gallery Image 1"></div>
+				<div class="card" style="--index: 1;--color-card: 142, 252, 204;"><img class="img" src="images/IMG_8298 (1).jpg" alt="Gallery Image 2"></div>
+				<div class="card" style="--index: 2;--color-card: 142, 252, 157;"><img class="img" src="images/IMG_9629.jpg" alt="Gallery Image 3"></div>
+				<div class="card" style="--index: 3;--color-card: 215, 252, 142;"><img class="img" src="images/pics (1)/IMG_8679.jpg" alt="Gallery Image 4"></div>
+				<div class="card" style="--index: 4;--color-card: 252, 252, 142;"><img class="img" src="images/pics (1)/IMG_8671.jpg" alt="Gallery Image 5"></div>
+				<div class="card" style="--index: 5;--color-card: 252, 208, 142;"><img class="img" src="images/hobbies/IMG_8594.jpg" alt="Gallery Image 6"></div>
+				<div class="card" style="--index: 6;--color-card: 252, 142, 142;"><img class="img" src="images/hobbies/IMG_8595.jpg" alt="Gallery Image 7"></div>
+				<div class="card" style="--index: 7;--color-card: 252, 142, 239;"><img class="img" src="images/hobbies/IMG_8594_1.jpg" alt="Gallery Image 8"></div>
+				<div class="card" style="--index: 8;--color-card: 204, 142, 252;"><img class="img" src="images/IMG_6530.jpg" alt="Gallery Image 9"></div>
+				<div class="card" style="--index: 9;--color-card: 142, 202, 252;"><img class="img" src="images/pics (1)/IMG_8672.jpg" alt="Gallery Image 10"></div>
+			</div>
+		</div>
+		
 	</section>
-
 	<section class="site-section" id="section-contact">
 		<div class="container">
 			<div class="row">
@@ -700,7 +737,7 @@
 			<div class="row mb-5">
 				<p class="col-12 text-center">
 					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-					Copyright &copy; <script>document.write(new Date().getFullYear());</script> All rights reserved | This website is made by <i class="icon-heart text-danger" aria-hidden="true" ></i> by <a href="https://github.com/Chad96" target="_blank" class="text-primary">chadrack Ndalamba</a>
+					Copyright &copy; <script>document.write(new Date().getFullYear());</script> All rights reserved | This website is made  by <a href="https://github.com/Chad96" target="_blank" class="text-primary">Chadrack Ndalamba</a>
 					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 				</p>
 			</div>
