@@ -1,0 +1,95 @@
+FUNCTION detectMobile()
+    RETURN {
+        Android: CHECK user agent contains 'Android'
+        BlackBerry: CHECK user agent contains 'BlackBerry'
+        iOS: CHECK user agent contains 'iPhone' OR 'iPad' OR 'iPod'
+        Opera: CHECK user agent contains 'Opera Mini'
+        Windows: CHECK user agent contains 'IEMobile'
+        any: RETURN TRUE if any of the above is TRUE
+    }
+
+FUNCTION onePageNavigation()
+    ON click event for smooth scroll links
+        PREVENT default behavior
+        GET target section from link
+        SCROLL to target section smoothly
+        UPDATE window hash
+
+    ON click event for navigation items
+        IF mobile menu is visible THEN close menu
+
+    ON scroll event, activate section indicator
+
+FUNCTION offCanvasNavigation()
+    DEFINE toggle button and navigation panel
+    ON toggle button click
+        TOGGLE navigation panel active state
+    ON navigation panel click
+        IF panel is active THEN close it
+
+FUNCTION animateScroll()
+    DEFINE waypoint for animated elements
+    ON entering viewport
+        ADD animation class based on effect type
+        APPLY animation sequentially with delay
+
+FUNCTION navbarState()
+    DEFINE last scroll position
+    ON window scroll
+        GET current scroll position
+        IF scrolled beyond threshold THEN apply styles
+        UPDATE last scroll position
+
+FUNCTION enableParallax()
+    ENABLE parallax scrolling with responsive settings
+
+FUNCTION clickMenu()
+    ON navigation item click
+        GET target section
+        IF mobile THEN close menu
+        SCROLL to target section smoothly
+
+FUNCTION navigationSection()
+    DEFINE sections with navigation markers
+    ON entering section
+        ACTIVATE corresponding navigation item
+    ON leaving section
+        DEACTIVATE previous item
+
+FUNCTION smoothScroll()
+    ON click event for smooth scroll links
+        PREVENT default behavior
+        SCROLL to target smoothly
+
+FUNCTION imagePopup()
+    INITIALIZE image gallery popup
+    ON image click
+        OPEN popup with zoom effect
+    ENABLE video popups
+
+FUNCTION portfolioMasonry()
+    ON filter click
+        UPDATE active filter
+        APPLY filter to portfolio grid
+
+FUNCTION modalImagePreview()
+    CREATE modal element
+    ON image click
+        DISPLAY modal with enlarged image
+    ON close button click
+        HIDE modal
+    ON outside click
+        CLOSE modal if background is clicked
+
+FUNCTION initializePage()
+    CALL onePageNavigation()
+    CALL offCanvasNavigation()
+    CALL animateScroll()
+    CALL navbarState()
+    CALL clickMenu()
+    CALL smoothScroll()
+    CALL portfolioMasonry()
+    CALL modalImagePreview()
+
+ON document ready
+    CALL initializePage()
